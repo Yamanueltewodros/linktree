@@ -35,14 +35,6 @@
             animation: bounceIn 1s ease-in-out;
         }
 
-        /* Logo Styling */
-        .logo {
-            width: 120px; /* Adjust based on your logo size */
-            height: auto;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-
         /* Header Styling */
         h1 {
             font-size: 28px;
@@ -75,6 +67,13 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
+        .link img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
         .link::before {
             content: '';
             position: absolute;
@@ -96,35 +95,35 @@
         }
 
         /* Specific Button Styles */
-        .link:nth-child(3) { /* YouTube */
+        .link:nth-child(2) { /* YouTube */
             background: #ff4444;
             border: 2px solid #cc0000;
         }
-        .link:nth-child(3):hover {
+        .link:nth-child(2):hover {
             background: #cc0000;
         }
 
-        .link:nth-child(4) { /* Website */
+        .link:nth-child(3) { /* Website */
             background: #00cc66;
             border: 2px solid #00994d;
         }
-        .link:nth-child(4):hover {
+        .link:nth-child(3):hover {
             background: #00994d;
         }
 
-        .link:nth-child(5) { /* Instagram */
+        .link:nth-child(4) { /* Instagram */
             background: #ff9900;
             border: 2px solid #cc7700;
         }
-        .link:nth-child(5):hover {
+        .link:nth-child(4):hover {
             background: #cc7700;
         }
 
-        .link:nth-child(6) { /* Facebook */
+        .link:nth-child(5) { /* Facebook */
             background: #0066cc;
             border: 2px solid #004d99;
         }
-        .link:nth-child(6):hover {
+        .link:nth-child(5):hover {
             background: #004d99;
         }
 
@@ -132,12 +131,6 @@
         @keyframes bounceIn {
             0% { opacity: 0; transform: scale(0.8); }
             60% { opacity: 1; transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
 
@@ -171,8 +164,8 @@
                 max-width: 300px;
             }
 
-            .logo {
-                width: 100px;
+            .link img {
+                width: 30px;
             }
         }
     </style>
@@ -180,12 +173,19 @@
 </head>
 <body>
     <div class="container">
-        <img src="path/to/stem-for-kids-ethiopia-logo.png" alt="STEM for Kids Ethiopia Logo" class="logo">
         <h1>STEM for Kids Ethiopia</h1>
-        <a class="link" href="https://youtube.com/@stemforkidsethiopia?si=mscYU573RT0O7_Wk" target="_blank">📺 YouTube</a>
-        <a class="link" href="https://stemforkids.et/" target="_blank">🌍 Website</a>
-        <a class="link" href="https://www.instagram.com/stem_for_kids_ethiopia?igsh=bDBpanhyM2hzYzFo" target="_blank">📷 Instagram</a>
-        <a class="link" href="https://www.facebook.com/share/161CxhDN6k/" target="_blank">📘 Facebook</a>
+        <a class="link" href="https://youtube.com/@stemforkidsethiopia" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"> YouTube
+        </a>
+        <a class="link" href="https://stemforkids.et/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Globe_icon.svg" alt="Website"> Website
+        </a>
+        <a class="link" href="https://www.instagram.com/stem_for_kids_ethiopia" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"> Instagram
+        </a>
+        <a class="link" href="https://www.facebook.com/share/161CxhDN6k/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Facebook_Logo_2023.png" alt="Facebook"> Facebook
+        </a>
     </div>
 
     <!-- Background Bubbles -->
