@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Comic Neue', cursive; /* Kid-friendly font */
+            font-family: 'Comic Neue', cursive;
         }
 
         body {
@@ -18,7 +18,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #00ddeb, #ff6f61, #ffb400); /* Bright, kid-friendly colors */
+            background: linear-gradient(135deg, #00ddeb, #ff6f61, #ffb400);
             overflow: hidden;
             position: relative;
         }
@@ -31,41 +31,27 @@
             text-align: center;
             width: 90%;
             max-width: 450px;
-            position: relative;
-            border: 3px dashed #ff6f61; /* Dashed border for playful vibe */
+            border: 3px dashed #ff6f61;
             animation: bounceIn 1s ease-in-out;
+        }
+
+        /* Logo Styling */
+        .logo {
+            width: 120px; /* Adjust based on your logo size */
+            height: auto;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
         }
 
         /* Header Styling */
         h1 {
-            font-size: 32px;
-            color: #0066cc; /* Bright blue for STEM */
+            font-size: 28px;
+            color: #0066cc;
             margin-bottom: 25px;
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: 2px;
-            position: relative;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h1::before {
-            content: "🚀"; /* Rocket emoji for STEM */
-            position: absolute;
-            left: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 28px;
-            animation: spin 4s infinite linear;
-        }
-
-        h1::after {
-            content: "🔬"; /* Microscope emoji */
-            position: absolute;
-            right: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 28px;
-            animation: pulse 2s infinite;
         }
 
         /* Link Button Styles */
@@ -105,40 +91,40 @@
         }
 
         .link:hover {
-            transform: scale(1.05) rotate(2deg); /* Playful tilt */
+            transform: scale(1.05) rotate(2deg);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
         }
 
-        /* Specific Button Styles for STEM Theme */
-        .link:nth-child(2) { /* YouTube */
-            background: #ff4444; /* Bright red for videos */
+        /* Specific Button Styles */
+        .link:nth-child(3) { /* YouTube */
+            background: #ff4444;
             border: 2px solid #cc0000;
         }
-        .link:nth-child(2):hover {
+        .link:nth-child(3):hover {
             background: #cc0000;
         }
 
-        .link:nth-child(3) { /* Website */
-            background: #00cc66; /* Green for learning */
+        .link:nth-child(4) { /* Website */
+            background: #00cc66;
             border: 2px solid #00994d;
         }
-        .link:nth-child(3):hover {
+        .link:nth-child(4):hover {
             background: #00994d;
         }
 
-        .link:nth-child(4) { /* Instagram */
-            background: #ff9900; /* Orange for creativity */
+        .link:nth-child(5) { /* Instagram */
+            background: #ff9900;
             border: 2px solid #cc7700;
         }
-        .link:nth-child(4):hover {
+        .link:nth-child(5):hover {
             background: #cc7700;
         }
 
-        .link:nth-child(5) { /* Facebook */
-            background: #0066cc; /* Blue for community */
+        .link:nth-child(6) { /* Facebook */
+            background: #0066cc;
             border: 2px solid #004d99;
         }
-        .link:nth-child(5):hover {
+        .link:nth-child(6):hover {
             background: #004d99;
         }
 
@@ -149,18 +135,13 @@
             100% { transform: scale(1); }
         }
 
-        @keyframes spin {
-            0% { transform: translateY(-50%) rotate(0deg); }
-            100% { transform: translateY(-50%) rotate(360deg); }
-        }
-
         @keyframes pulse {
-            0% { transform: translateY(-50%) scale(1); }
-            50% { transform: translateY(-50%) scale(1.2); }
-            100% { transform: translateY(-50%) scale(1); }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
-        /* Background Bubbles for STEM Fun */
+        /* Background Bubbles */
         .bubble {
             position: absolute;
             border-radius: 50%;
@@ -181,7 +162,7 @@
             }
 
             h1 {
-                font-size: 26px;
+                font-size: 24px;
             }
 
             .link {
@@ -190,8 +171,8 @@
                 max-width: 300px;
             }
 
-            h1::before, h1::after {
-                font-size: 22px;
+            .logo {
+                width: 100px;
             }
         }
     </style>
@@ -199,6 +180,7 @@
 </head>
 <body>
     <div class="container">
+        <img src="path/to/stem-for-kids-ethiopia-logo.png" alt="STEM for Kids Ethiopia Logo" class="logo">
         <h1>STEM for Kids Ethiopia</h1>
         <a class="link" href="https://youtube.com/@stemforkidsethiopia?si=mscYU573RT0O7_Wk" target="_blank">📺 YouTube</a>
         <a class="link" href="https://stemforkids.et/" target="_blank">🌍 Website</a>
