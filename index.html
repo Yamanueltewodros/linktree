@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEM1 for Kids Ethiopia</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <title>STEM for Kids Ethiopia</title>
+    <!-- Font Awesome CDN for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* General Styles */
         * {
@@ -78,8 +78,23 @@
         }
 
         .link i {
-            margin-right: 10px;
+            margin-right: 10px; /* Space between icon and text */
             font-size: 24px;
+        }
+
+        .link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.5s ease;
+        }
+
+        .link:hover::before {
+            left: 100%;
         }
 
         .link:hover {
@@ -88,17 +103,37 @@
         }
 
         /* Specific Button Styles */
-        .youtube { background: #ff4444; border: 2px solid #cc0000; }
-        .youtube:hover { background: #cc0000; }
+        .link:nth-child(3) { /* YouTube */
+            background: #ff4444;
+            border: 2px solid #cc0000;
+        }
+        .link:nth-child(3):hover {
+            background: #cc0000;
+        }
 
-        .website { background: #00cc66; border: 2px solid #00994d; }
-        .website:hover { background: #00994d; }
+        .link:nth-child(4) { /* Website */
+            background: #00cc66;
+            border: 2px solid #00994d;
+        }
+        .link:nth-child(4):hover {
+            background: #00994d;
+        }
 
-        .instagram { background: #ff9900; border: 2px solid #cc7700; }
-        .instagram:hover { background: #cc7700; }
+        .link:nth-child(5) { /* Instagram */
+            background: #ff9900;
+            border: 2px solid #cc7700;
+        }
+        .link:nth-child(5):hover {
+            background: #cc7700;
+        }
 
-        .facebook { background: #1877f2; border: 2px solid #1256a0; }
-        .facebook:hover { background: #1256a0; }
+        .link:nth-child(6) { /* Facebook */
+            background: #0066cc;
+            border: 2px solid #004d99;
+        }
+        .link:nth-child(6):hover {
+            background: #004d99;
+        }
 
         /* Animation Keyframes */
         @keyframes bounceIn {
@@ -148,23 +183,16 @@
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <img src="path/to/stem-for-kids-ethiopia-logo.png" alt="STEM for Kids Ethiopia Logo" class="logo">
         <h1>STEM for Kids Ethiopia</h1>
-        <a class="link youtube" href="https://youtube.com/@stemforkidsethiopia?si=mscYU573RT0O7_Wk" target="_blank">
-            <i class="fab fa-youtube"></i> YouTube
-        </a>
-        <a class="link website" href="https://stemforkids.et/" target="_blank">
-            <i class="fas fa-globe"></i> Website
-        </a>
-        <a class="link instagram" href="https://www.instagram.com/stem_for_kids_ethiopia?igsh=bDBpanhyM2hzYzFo" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a class="link facebook" href="https://www.facebook.com/share/161CxhDN6k/" target="_blank">
-            <i class="fab fa-facebook-f"></i> Facebook
-        </a>
+        <a class="link" href="https://youtube.com/@stemforkidsethiopia?si=mscYU573RT0O7_Wk" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+        <a class="link" href="https://stemforkids.et/" target="_blank"><i class="fas fa-globe"></i> Website</a>
+        <a class="link" href="https://www.instagram.com/stem_for_kids_ethiopia?igsh=bDBpanhyM2hzYzFo" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a class="link" href="https://www.facebook.com/share/161CxhDN6k/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
     </div>
 
     <!-- Background Bubbles -->
