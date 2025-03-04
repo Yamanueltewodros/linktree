@@ -5,48 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM for Kids Ethiopia</title>
     <style>
-        body { 
-            text-align: center; 
-            font-family: Arial, sans-serif; 
-            background: #f4f4f4; 
-            padding: 20px;
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
-        .container { 
-            margin-top: 50px; 
-            background: white; 
-            padding: 20px; 
-            border-radius: 10px; 
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
             max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
         }
+
         h1 {
+            font-size: 24px;
             color: #333;
+            margin-bottom: 20px;
         }
-        .link { 
-            display: block; 
-            margin: 10px auto; 
-            padding: 15px; 
-            width: 80%; 
-            background: #007bff; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 5px; 
+
+        /* Link Button Styles */
+        .link {
+            display: block;
+            margin: 10px auto;
+            padding: 15px;
+            width: 100%;
+            max-width: 320px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
             font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .link:hover { 
-            background: #0056b3; 
+
+        .link:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>STEM for Kids Ethiopia</h1>
-        <a class="link" href="https://youtube.com/@stemforkidsethiopia?si=mscYU573RT0O7_Wk" target="_blank">YouTube</a>
-        <a class="link" href="https://stemforkids.et/" target="_blank">Website</a>
-        <a class="link" href="https://www.instagram.com/stem_for_kids_ethiopia?igsh=bDBpanhyM2hzYzFo" target="_blank">Instagram</a>
-        <a class="link" href="https://www.facebook.com/share/161CxhDN6k/" target="_blank">Facebook</a>
+        <a class="link" href="https://youtube.com/@stemforkidsethiopia?si=mscYU573RT0O7_Wk" target="_blank">📺 YouTube</a>
+        <a class="link" href="https://stemforkids.et/" target="_blank">🌍 Website</a>
+        <a class="link" href="https://www.instagram.com/stem_for_kids_ethiopia?igsh=bDBpanhyM2hzYzFo" target="_blank">📷 Instagram</a>
+        <a class="link" href="https://www.facebook.com/share/161CxhDN6k/" target="_blank">📘 Facebook</a>
     </div>
 </body>
 </html>
