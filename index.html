@@ -67,11 +67,16 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .link img {
+        .link img, .link .emoji-icon {
             width: 40px;
-            height: auto;
+            height: 40px; /* Ensure consistent height */
             margin-right: 10px;
             vertical-align: middle;
+        }
+
+        .link .emoji-icon {
+            font-size: 40px; /* Match emoji size to image icons */
+            line-height: 40px; /* Center vertically */
         }
 
         .link::before {
@@ -103,28 +108,28 @@
             background: #cc0000;
         }
 
-        .link:nth-child(3) { /* Website */
-            background: #00cc66;
-            border: 2px solid #00994d;
-        }
-        .link:nth-child(3):hover {
-            background: #00994d;
-        }
-
-        .link:nth-child(4) { /* Instagram */
+        .link:nth-child(3) { /* Instagram */
             background: #ff9900;
             border: 2px solid #cc7700;
         }
-        .link:nth-child(4):hover {
+        .link:nth-child(3):hover {
             background: #cc7700;
         }
 
-        .link:nth-child(5) { /* Facebook */
+        .link:nth-child(4) { /* Facebook */
             background: #0066cc;
             border: 2px solid #004d99;
         }
-        .link:nth-child(5):hover {
+        .link:nth-child(4):hover {
             background: #004d99;
+        }
+
+        .link:nth-child(5) { /* Website */
+            background: #00cc66;
+            border: 2px solid #00994d;
+        }
+        .link:nth-child(5):hover {
+            background: #00994d;
         }
 
         /* Animation Keyframes */
@@ -164,8 +169,11 @@
                 max-width: 300px;
             }
 
-            .link img {
+            .link img, .link .emoji-icon {
                 width: 30px;
+                height: 30px;
+                font-size: 30px; /* Adjust emoji size */
+                line-height: 30px;
             }
         }
     </style>
@@ -177,14 +185,14 @@
         <a class="link" href="https://youtube.com/@stemforkidsethiopia" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"> YouTube
         </a>
-        <a class="link" href="https://stemforkids.et/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Globe_icon.svg" alt="Website"> Website
-        </a>
         <a class="link" href="https://www.instagram.com/stem_for_kids_ethiopia" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"> Instagram
         </a>
         <a class="link" href="https://www.facebook.com/share/161CxhDN6k/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Facebook_Logo_2023.png" alt="Facebook"> Facebook
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"> Facebook
+        </a>
+        <a class="link" href="https://stemforkids.et/" target="_blank">
+            <span class="emoji-icon">🌍</span> Website
         </a>
     </div>
 
