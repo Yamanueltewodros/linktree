@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif; /* Modern, clean font */
+            font-family: 'Comic Neue', cursive; /* Kid-friendly font */
         }
 
         body {
@@ -18,47 +18,54 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #1e3c72, #2a5298, #f64f59); /* Vibrant gradient */
-            overflow: hidden; /* Prevents scroll for a cleaner look */
+            background: linear-gradient(135deg, #00ddeb, #ff6f61, #ffb400); /* Bright, kid-friendly colors */
+            overflow: hidden;
+            position: relative;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+            background: rgba(255, 255, 255, 0.9);
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             text-align: center;
             width: 90%;
             max-width: 450px;
             position: relative;
-            backdrop-filter: blur(10px); /* Glassmorphism effect */
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: fadeIn 1s ease-in-out; /* Entry animation */
+            border: 3px dashed #ff6f61; /* Dashed border for playful vibe */
+            animation: bounceIn 1s ease-in-out;
         }
 
         /* Header Styling */
         h1 {
-            font-size: 28px;
-            color: #1e3c72; /* Deep blue for professionalism */
-            margin-bottom: 30px;
-            letter-spacing: 1px;
+            font-size: 32px;
+            color: #0066cc; /* Bright blue for STEM */
+            margin-bottom: 25px;
             text-transform: uppercase;
             font-weight: 700;
-            background: linear-gradient(90deg, #f64f59, #2a5298); /* Gradient text */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
             position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1::before {
+            content: "🚀"; /* Rocket emoji for STEM */
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 28px;
+            animation: spin 4s infinite linear;
         }
 
         h1::after {
-            content: '';
+            content: "🔬"; /* Microscope emoji */
             position: absolute;
-            width: 50%;
-            height: 3px;
-            background: #f64f59;
-            bottom: -10px;
-            left: 25%;
-            border-radius: 5px;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 28px;
+            animation: pulse 2s infinite;
         }
 
         /* Link Button Styles */
@@ -70,84 +77,100 @@
             padding: 15px;
             width: 100%;
             max-width: 350px;
-            background: linear-gradient(45deg, #2a5298, #6e8efb); /* Gradient buttons */
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
-            border-radius: 50px; /* Rounded edges */
-            transition: all 0.4s ease-in-out;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .link::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
             background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.6s ease, height 0.6s ease;
+            transition: all 0.5s ease;
         }
 
         .link:hover::before {
-            width: 300px;
-            height: 300px;
+            left: 100%;
         }
 
         .link:hover {
-            transform: translateY(-5px) scale(1.05); /* Slight lift and zoom */
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(45deg, #f64f59, #c471ed); /* Hover gradient */
+            transform: scale(1.05) rotate(2deg); /* Playful tilt */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
         }
 
-        .link:active {
-            transform: translateY(2px); /* Pressed effect */
-        }
-
-        /* Icon Styling */
-        .link::first-child {
-            margin-left: 10px; /* Space for icons */
-        }
-
-        /* Specific Button Colors */
+        /* Specific Button Styles for STEM Theme */
         .link:nth-child(2) { /* YouTube */
-            background: linear-gradient(45deg, #ff0000, #ff5555);
+            background: #ff4444; /* Bright red for videos */
+            border: 2px solid #cc0000;
         }
         .link:nth-child(2):hover {
-            background: linear-gradient(45deg, #cc0000, #ff3333);
+            background: #cc0000;
         }
 
         .link:nth-child(3) { /* Website */
-            background: linear-gradient(45deg, #00c4cc, #00e676);
+            background: #00cc66; /* Green for learning */
+            border: 2px solid #00994d;
         }
         .link:nth-child(3):hover {
-            background: linear-gradient(45deg, #009b9f, #00b359);
+            background: #00994d;
         }
 
         .link:nth-child(4) { /* Instagram */
-            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            background: #ff9900; /* Orange for creativity */
+            border: 2px solid #cc7700;
         }
         .link:nth-child(4):hover {
-            background: linear-gradient(45deg, #662d91, #c13584);
+            background: #cc7700;
         }
 
         .link:nth-child(5) { /* Facebook */
-            background: linear-gradient(45deg, #3b5998, #8b9dc3);
+            background: #0066cc; /* Blue for community */
+            border: 2px solid #004d99;
         }
         .link:nth-child(5):hover {
-            background: linear-gradient(45deg, #2a4373, #627aad);
+            background: #004d99;
         }
 
         /* Animation Keyframes */
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            60% { opacity: 1; transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes spin {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.2); }
+            100% { transform: translateY(-50%) scale(1); }
+        }
+
+        /* Background Bubbles for STEM Fun */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            animation: floatUp 5s infinite ease-in-out;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0.8; }
+            100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
         }
 
         /* Responsive Design */
@@ -158,31 +181,21 @@
             }
 
             h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
 
             .link {
-                font-size: 16px;
+                font-size: 18px;
                 padding: 12px;
                 max-width: 300px;
             }
-        }
 
-        /* Fun Floating Particles (Optional) */
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.6);
-            animation: float 6s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); opacity: 0.8; }
-            50% { transform: translateY(-100vh); opacity: 0.2; }
-            100% { transform: translateY(0); opacity: 0.8; }
+            h1::before, h1::after {
+                font-size: 22px;
+            }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -193,9 +206,11 @@
         <a class="link" href="https://www.facebook.com/share/161CxhDN6k/" target="_blank">📘 Facebook</a>
     </div>
 
-    <!-- Optional Floating Particles -->
-    <div class="particle" style="width: 10px; height: 10px; top: 20%; left: 10%; animation-delay: 0s;"></div>
-    <div class="particle" style="width: 15px; height: 15px; top: 50%; left: 80%; animation-delay: 2s;"></div>
-    <div class="particle" style="width: 8px; height: 8px; top: 70%; left: 30%; animation-delay: 4s;"></div>
+    <!-- Background Bubbles -->
+    <div class="bubble" style="width: 20px; height: 20px; left: 10%; animation-delay: 0s;"></div>
+    <div class="bubble" style="width: 15px; height: 15px; left: 30%; animation-delay: 1s;"></div>
+    <div class="bubble" style="width: 25px; height: 25px; left: 50%; animation-delay: 2s;"></div>
+    <div class="bubble" style="width: 18px; height: 18px; left: 70%; animation-delay: 3s;"></div>
+    <div class="bubble" style="width: 22px; height: 22px; left: 90%; animation-delay: 4s;"></div>
 </body>
 </html>
